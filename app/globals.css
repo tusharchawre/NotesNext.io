@@ -1,27 +1,188 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Jua&display=swap');
+*{
+  margin: 0;
+  padding: 0%;
+  color: white;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html, body{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  color: aliceblue;
+
+}
+
+.main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav h4{
+  padding: 1vmax 2vmax;
+}
+
+.nav{
+  margin: 10px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.67);
+  font-family: 'Joti One', cursive;
+    font-size: 2vmax;
+}
+
+.layout{
+  display: flex;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+
+  }
+  .notespane{
+    height: 17vh !important;
+    width: 100% !important;
+    border: none;
+  }
+  .note{
+    width: 88% !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.notespane {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 20px;
+  border-radius: 7px;
+  border-right: 1px solid rgba(255, 255, 255, 0.382);
+  height: 80vmin;
+  width: 20%;
+  /* background-color: rgba(77, 77, 77, 0.5); */
+}
+
+.submit{
+  width: 98%;
+  text-align: right;
+
+
+}
+
+.submit button{
+
+  font-size: 1.5vw;
+  width: 2vw;
+  height: 2vw;
+  background-color: rgba(217, 217, 217, 0.12);
+  border: none;
+  border-radius: 2px;
+
+}
+
+
+
+
+
+.note{
+  font-size: 1.2vmax;
+  font-family: 'Jua', sans-serif;
+  height: 80vh;
+  padding: 2vmax 4vmax;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+}
+
+
+
+
+.newnote{
+  width: 100%;
+  margin: 0.5vmax 0;
+  height: 25vh;
+  border-radius: 7px;
+  background: rgba(217, 217, 217, 0.12);
+}
+
+
+
+.puranenotes{
+  padding:0 1vmax;
+  align-items: center;
+  overflow: auto;
+  gap: 1vw;
+  display: flex;
+
+  overflow-x: auto;
+
+
+  margin: 1vmax 0;
+  height: 35vh;
+  border-radius: 7px;
+background: rgba(217, 217, 217, 0.12);
+}
+
+.time{
+  position: absolute;
+  opacity: 0.5;
+  margin-bottom: 1vw;
+  bottom: 0;
+  right: 0;
+}
+
+.newnote .Note-title{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2vmax;
+  padding: 0.3vmax 1vmax;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  height: 3vh;
+  margin: 1vmax 2vmax;
+  outline: none;
+  background-color: rgba(240, 255, 255, 0.098);
+}
+
+.newnote .notetext{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2vmax;
+    padding: 0.5vmax 1vmax;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    height: 50%;
+   text-wrap: wrap;
+   resize: none;
+    margin: 0 2vmax;
+    outline: none;
+    background-color: rgba(240, 255, 255, 0.098);
+  }
+
+ 
+.note-card{
+  position: relative;
+  border-radius: 5px;
+    height: 30vmin;
+    width: 30vmax;
+    flex-shrink: 0;
+
+    background-color: rgba(240, 255, 255, 0.098);
+}
+
+.note-card p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.note-card h4 {
+  padding-top: 1vmax;
+  padding-bottom: 0.5vmax;
+}
+
+.note-card *{
+  padding: 0 2vmax;
 }
