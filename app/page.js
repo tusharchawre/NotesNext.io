@@ -12,7 +12,6 @@ const [notes, setnotes] = useState([])
 
 
 const submitHandler = ()=>{
-  const currTime = new Date().toLocaleTimeString();
 
  
   setnotes([...notes,{title, text}])
@@ -53,6 +52,8 @@ if (title != "" || text != ""){
 }
 
 const renderNotes = notes.slice(0).reverse().map((t,i) => {
+    const currTime = new Date().toLocaleTimeString();
+
   return <>
 <div className="note-card">
       <h4>{t.title}</h4>
