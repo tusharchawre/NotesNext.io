@@ -9,12 +9,12 @@ const page = () => {
 const [title, settitle] = useState("")
 const [text, settext] = useState("")
 const [notes, setnotes] = useState([])
-const currTime = new Date().toLocaleTimeString();
 
 
 const submitHandler = ()=>{
-  console.log(title)
-  console.log(text)
+  const currTime = new Date().toLocaleTimeString();
+
+ 
   setnotes([...notes,{title, text}])
   settitle("")
   settext("")
